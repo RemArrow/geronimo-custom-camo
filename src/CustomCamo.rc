@@ -1,0 +1,34 @@
+// CustomCamo.dll resources: the camo picture (512x512, the camo list entry and menu swatch) and the
+// version block. build.bat makes the swatch from Assets\camo.*.
+#include "version.h"
+
+SWATCH RCDATA "build\\gen\\swatch_512.png"
+
+1 VERSIONINFO
+FILEVERSION CUSTOMCAMO_VERSION_NUM
+PRODUCTVERSION CUSTOMCAMO_VERSION_NUM
+FILEFLAGSMASK 0x3F
+FILEFLAGS 0x0
+FILEOS 0x40004
+FILETYPE 0x2
+FILESUBTYPE 0x0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "RemArrow"
+            VALUE "FileDescription", "Custom Camo - GML plugin for Geronimo"
+            VALUE "FileVersion", CUSTOMCAMO_VERSION
+            VALUE "InternalName", "CustomCamo"
+            VALUE "OriginalFilename", "CustomCamo.dll"
+            VALUE "ProductName", "Custom Camo"
+            VALUE "ProductVersion", CUSTOMCAMO_VERSION
+            VALUE "Comments", "Adds a camo to Geronimo's kit station. Not affiliated with or endorsed by Dark Matter Studios."
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
